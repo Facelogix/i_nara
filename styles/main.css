@@ -1,0 +1,92 @@
+@charset "UTF-8";
+div > .container {
+  width: 1200px;
+}
+
+header {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), transparent); /* 그라디언트 */
+  position: fixed;
+  z-index: 20;
+  height: 100px;
+  width: 100%;
+  padding: 0 15px; /* 포지션 때문에 마진값이 적용되지 않는다 */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  background-color: bisque;
+  width: 150px;
+}
+header h1 a img {
+  width: 100%;
+}
+header .right {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+header .right .app {
+  font-family: "Jua", sans-serif;
+  font-weight: 700;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+header .right .menu {
+  background-color: bisque;
+  display: flex;
+  flex-flow: column nowrap;
+}
+header .right .menu span {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 5px;
+}
+header .right .menu span:nth-child(2) {
+  margin: 5px 0;
+}
+
+main {
+  background-color: bisque;
+}
+main .visual {
+  text-align: center;
+  margin: 0 auto;
+}
+main .visual .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+}
+main .visual .container h1 {
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+}
+main .visual .container p {
+  color: #fff;
+  line-height: 1.5em;
+}
+main .visual video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+main .visual .down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 20;
+}/*# sourceMappingURL=main.css.map */
