@@ -15,8 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header h1 {
-  background-color: bisque;
+header h1 { /* background-color: bisque; */
   width: 150px;
 }
 header h1 a img {
@@ -29,14 +28,14 @@ header .right {
 }
 header .right .app {
   font-family: "Jua", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   border: 2px solid #fff;
   padding: 15px 25px;
   border-radius: 20px;
   margin-right: 20px;
+  color: #fff;
 }
-header .right .menu {
-  background-color: bisque;
+header .right .menu { /* background-color: bisque; */
   display: flex;
   flex-flow: column nowrap;
 }
@@ -57,15 +56,18 @@ main {
 main .visual {
   text-align: center;
   margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
-main .visual .container {
+main .container {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
-  z-index: 20;
+  z-index: 110;
   transform: translate(-50%, -50%);
 }
-main .visual .container h1 {
+main .container h1 {
   font-family: "Jua", sans-serif;
   font-weight: 500;
   font-size: 3rem;
@@ -73,20 +75,101 @@ main .visual .container h1 {
   line-height: 1.5em;
   letter-spacing: -0.02em;
 }
-main .visual .container p {
+main .container p {
   color: #fff;
   line-height: 1.5em;
+  margin: 10px 0 60px;
 }
-main .visual video {
+main .container .app {
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 20px 100px;
+}
+main video {
+  width: 130%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, 0);
+}
+main .down {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  z-index: 110;
+  text-align: center;
+  width: 100%;
+}
+main .visual::before {
+  display: block;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
+  width: 100%;
+  height: 100%;
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
-  width: 100%;
+  z-index: 105;
 }
-main .visual .down {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  z-index: 20;
+main .event {
+  background-color: aqua;
+  width: 1200px;
+  margin: 0 auto;
+}
+main .event .text {
+  margin: 100px 0;
+  background-color: brown;
+}
+main .event .text h1 {
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+}
+main .event .text p {
+  color: #fff;
+  line-height: 1.5em;
+}
+main .event .text a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 0.875rem;
+  font-family: "Jua", sans-serif;
+  font-weight: 600;
+}
+main .event .slide_wrap .slide_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 320px;
+}
+main .event .slide_wrap .slide_container .slide {
+  margin-right: 5px;
+  padding: 10px;
+  background-repeat: no-repeat center;
+  background-size: 60%;
+  background-position: right bottom;
+  border-radius: 30px;
+}
+main .event .slide_wrap .slide_container .slide h2 {
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+}
+main .event .slide_wrap .slide_container .slide1 {
+  background: #ffe552 url(../images/event_image_0_20221028085348_35465.png);
+}
+main .event .slide_wrap .slide_container .slide2 {
+  background: #b2e9de url(../images/event_image_0_20221028085704_61822.png);
+}
+main .event .slide_wrap .slide_container .slide3 {
+  background: #ffcfd8 url(../images/event_image_3_20221105015010_49282.png);
 }/*# sourceMappingURL=main.css.map */
